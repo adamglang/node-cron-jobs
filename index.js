@@ -1,11 +1,4 @@
-const cron = require("node-cron");
-const express = require("express");
-const fs = require("fs");
+const schedule = require('node-schedule');
+const mysqlBackup = require('./mysql-backup');
 
-app = express();
-
-cron.schedule("* * * * *", function() {
-	console.log("running a task every minute");
-});
-
-app.listen(3128);
+schedule.scheduleJob({ hour: 22, minute: 0 }, mysqlBackup);

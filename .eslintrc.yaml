@@ -1,0 +1,34 @@
+extends: airbnb-base
+
+rules:
+  indent:
+    - error
+    - tab
+  no-tabs: 0
+  no-console: 
+  - off
+  no-underscore-dangle:
+  - 'off'
+  prefer-destructuring:
+  - 'off'
+  - array: true
+    object: true
+  - enforceForRenamedProperties: false
+  no-unused-vars:
+  - error
+  - args: none
+  no-plusplus:
+  - error
+  - allowForLoopAfterthoughts: true
+  max-len:
+  - "warn"
+  - code: 140
+  no-param-reassign:
+  - error
+  - props: false
+  newline-per-chained-call:
+  - off
+  import/no-extraneous-dependencies:
+  - error
+globals:
+  expectAsync: true
